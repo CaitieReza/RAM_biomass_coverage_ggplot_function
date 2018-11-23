@@ -48,6 +48,7 @@ basic_biomass_by_stock_ggplot <- function(dataframe, regions, first_stock, end_s
     scale_fill_discrete(guide = guide_legend()) +
     theme(legend.position="bottom") +
     theme(plot.margin = unit(c(1.5, 1.5, 1, 1.5), "cm"))
-    
-    ```
 }
+```
+
+Just trying something..
