@@ -13,6 +13,7 @@ first_stock = the row to start with
 end_stock = the row to end with
 - I've found that 30 stocks is about the limit before the plot gets too condensed, so for regions with total number of stocks that are greater than 30, the first_stock and end_stock arguments allow a plot to be made for each set of 30 rows (first_stock = 1, end_stock = 30 for the first 30, etc.) and then the remainder with first_stock = 31 (or 61 or 91, etc.) and end_stock = max_stocks.
 
+```
 basic_biomass_by_stock_ggplot <- function(dataframe, regions, first_stock, end_stock) {
   ggplot(data = dataframe[first_stock:end_stock, ]) +
     geom_segment(aes( 
@@ -47,4 +48,6 @@ basic_biomass_by_stock_ggplot <- function(dataframe, regions, first_stock, end_s
     scale_fill_discrete(guide = guide_legend()) +
     theme(legend.position="bottom") +
     theme(plot.margin = unit(c(1.5, 1.5, 1, 1.5), "cm"))
+    
+    ```
 }
